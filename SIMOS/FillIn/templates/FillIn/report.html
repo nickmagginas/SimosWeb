@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Flight Details </title>
+</head>
+<body>
+	<article action="pdf_out">
+		Route:
+		<p>{{origin}} &rarr; {{destination}}</p>
+
+		Travelling on:
+		<p>{{date}} </p>
+
+		<p>With a {{model}}</p>
+
+		Crew selected:
+		<p>{% for name in {{crew}} %}
+			{{name}}
+		</p>
+
+		<p>Passenger number: {{passengers}}</p>
+
+		<p>Meals Selected: {{chicken}} chicken, {{fish}} fish, {{vegetarian}} vegetarian.</p>
+
+		<p>Expected flight duration: {{flight_time}} hours.</p>
+
+		<p>Expected flight cost: {{flight_cost}} pounds.</p>
+
+		<input type = "submit" value = "Confirm">
+	</article>
+
+</body>
+</html>

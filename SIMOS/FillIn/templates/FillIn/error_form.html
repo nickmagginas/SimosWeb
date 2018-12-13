@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form Details </title>
+</head>
+<body>
+	<!---
+	<form action="crewDetails/" method="get">
+        <input type="text" name="crew">
+        <input type="submit" value="Search">
+    </form>
+	-->
+	error form
+	{{debug}}
+	{% if errors %}
+		{% for message in errors %}
+			{{message}}<br>
+		{% endfor %}
+	{% endif %}
+    <form action = '' method = "get">
+    	{% for crewName, role in name %}
+		<input type = "checkbox" name = "Crew{{forloop.counter0}}" value = "{{crewName}}" > {{crewName}} - {{role}} </input><br>
+		{% endfor %}
+		{% for plane in models %}
+		<input type = "radio" name = "plane" value = "{{plane}}" required> {{plane}} </input><br>
+		{% endfor %}
+		Destination Airport<br>
+		{% for port in airports %}
+		<input type = "radio" name = "destination" value = "{{port}}" required> {{port}} </input><br> 
+		{% endfor %}
+		<input type = "number" name = "passengers" value = "passengers" required> Passenger Number </input><br>
+		<input type = "number" name = "altitude" value = "0" min="0" max="10" required> Flight Altitude </input><br>
+		<input type = "date" name = "fl_date" value = "fl_date" required> Flight Date </input><br>
+		Weather Conditions<br>
+		<input type = "radio" name = "Weather" value = "Calm" required> Calm </input><br>
+		<input type = "radio" name = "Weather" value = "Severe" required> Severe </input><br>
+		Passenger Meals<br>
+		<input type = "number" name = "Chicken" value = "0" required> Chicken </input>
+		<input type = "number" name = "Fish" value = "0" required> Fish </input>
+		<input type = "number" name = "Vegetarian" value = "0" required> Vegetarian </input><br>
+		<input type = "number" name = "weight" value = "0" required> Estimated weight/meal (grams) </input><br>
+		<input type = "submit" value = "Submit">
+
+    </form>
+</body>
+</html>

@@ -10,10 +10,46 @@
         <input type="submit" value="Search">
     </form>
 	-->
-    <form action = "crewDetails" method = "get">
-		<input type = "checkbox" name = "Crew1" value = "{{name.0}}"> {{name.0}} </input><br>
-		<input type = "checkbox" name = "Crew2" value = "Crew2"> {{name.1}} </input><br>
-		<input type = "submit" value = "Submit">
-    </form>
+	crew form
+	{% block content %}
+	{% if user.is_authenticated %}
+	  Hi {{ user.username }}!
+	  <p><a href="{% url 'logout' %}">logout</a></p>
+	
+			{% if errors %}
+			{% for message in errors %}
+				{{message}}<br>
+			{% endfor %}
+		{% endif %}
+	    <form action = '/report' method = "get">
+	    	{% for crewName, role in name %}
+			<input type = "checkbox" name = "Crew{{forloop.counter0}}" value = "{{crewName}}" > {{crewName}} - {{role}} </input><br>
+			{% endfor %}
+			{% for plane in models %}
+			<input type = "radio" name = "plane" value = "{{plane}}" required> {{plane}} </input><br>
+			{% endfor %}
+			Destination Airport<br>
+			{% for port in airports %}
+			<input type = "radio" name = "destination" value = "{{port}}" required> {{port}} </input><br> 
+			{% endfor %}
+			<input type = "number" name = "passengers" value = "passengers" required> Passenger Number </input><br>
+			<input type = "number" name = "altitude" value = "0" min="0" max="10" required> Flight Altitude </input><br>
+			<input type = "date" name = "fl_date" value = "fl_date" required> Flight Date </input><br>
+			Weather Conditions<br>
+			<input type = "radio" name = "Weather" value = "Calm" required> Calm </input><br>
+			<input type = "radio" name = "Weather" value = "Severe" required> Severe </input><br>
+			Passenger Meals<br>
+			<input type = "number" name = "Chicken" value = "0" required> Chicken </input>
+			<input type = "number" name = "Fish" value = "0" required> Fish </input>
+			<input type = "number" name = "Vegetarian" value = "0" required> Vegetarian </input><br>
+			<input type = "number" name = "weight" value = "0" required> Estimated weight/meal (grams) </input><br>
+			<input type = "submit" value = "Submit">
+
+    	</form>
+    {% else %}
+	  <p>You are not logged in</p>
+	  <a href="{% url 'login' %}">login</a>
+	{% endif %}
+	{% endblock %}
 </body>
 </html>

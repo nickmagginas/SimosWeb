@@ -1,0 +1,11 @@
+Date,Route,Aircraft,Crew,"Meals ([Chicken Fish Vegetarian]",Meal Weight,Distance,Altitude,Expected flight length,Expected fuel expenditure,Date Registered,Signed By
+28 December 2018,LHR-CDG,Boeing 727,['C3', 'C7', 'C9'],['50', '50', '50'],7500,347.15,3,4,1000,12-Dec-18
+28 December 2018,LHR-CDG,Boeing 727,C3 C7 C9 ,50 50 50 ,7500,347.15,3,4,1000,12-Dec-18
+28 December 2018,LHR-CDG,Boeing 727,C3 C7 C9 ,50 50 50 ,7500,347.15,3,4,1000,12-Dec-18
+25 December 2018,LHR-EDI,MTW 41N,C7 ,5 10 7 ,484,533.5,2,67,1000,12-Dec-18
+28 December 2018,LHR-BHX,Boeing 777,C1 C3 ,20 20 10 ,20000,140.41,5,1,1474.305,13-Dec-18
+14 February 2019,LHR-BHX,Boeing 757,C1 C4 ,30 10 10 ,25000,140.41,6,1,2864.3639999999996,13-Dec-18
+14 February 2019,LHR-BHX,Boeing 757,C1 C4 ,30 10 10 ,25000,140.41,6,1,2864.3639999999996,13-Dec-18
+14 February 2019,LHR-BHX,Boeing 757,C1 C4 ,30 10 10 ,25000,140.41,6,1,2864.3639999999996,13-Dec-18
+18 December 2018,LHR-BHX,Boeing 777,C2 C4 ,30 10 10 ,10000,140.41,9,1,1600.674,13-Dec-18
+26 December 2018,LHR-BHX,Boeing 777,C1 C4 ,10 10 10 ,9000,140.41,8,1,1418.1409999999998,13-Dec-18

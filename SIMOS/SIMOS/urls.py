@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-	path('themFeelz/', include('FillIn.urls')),
+	path('', include('FillIn.urls')),
     path('admin/', admin.site.urls),
+    path('login/', include('django.contrib.auth.urls'))
 ]
