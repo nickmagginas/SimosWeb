@@ -4,7 +4,7 @@
 	<title> Flight Details </title>
 </head>
 <body>
-	<article action="pdf_out">
+	<article>
 		Route:
 		<p>{{origin}} &rarr; {{destination}}</p>
 
@@ -14,8 +14,9 @@
 		<p>With a {{model}}</p>
 
 		Crew selected:
-		<p>{% for name in {{crew}} %}
+		<p>{% for name in crew %}
 			{{name}}
+		{% endfor %}
 		</p>
 
 		<p>Passenger number: {{passengers}}</p>
@@ -25,9 +26,9 @@
 		<p>Expected flight duration: {{flight_time}} hours.</p>
 
 		<p>Expected flight cost: {{flight_cost}} pounds.</p>
-
-		<input type = "submit" value = "Confirm">
+		
 	</article>
+	<form action = "report/pdf_out" method = "get"><input type = "submit" value = "Proceed"></form> 
 
 </body>
 </html>

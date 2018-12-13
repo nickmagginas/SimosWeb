@@ -147,7 +147,7 @@ class Information(TemplateView):
 			# report.append(f'Selected crew: {crew}.')
 			# report.append('Meals ordered:' + information['Chicken'] + ' Chicken\t' + information['Fish'] + ' Fish\t' + information['Vegetarian'] + ' Vegetarian')
 			# report.append(f'Expected flight length {flight_time} hours.')
-			return render(request, 'Fillin/crew_form.html', {
+			return render(request, 'Fillin/report.html', {
 				'origin': 'LHR', 
 				'destination': destination,
 				'date': date,
